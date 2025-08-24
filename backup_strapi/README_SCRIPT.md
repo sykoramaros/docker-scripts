@@ -76,20 +76,20 @@ chmod +x backup_strapi.sh
 
 ## 📋 Requirements
 
-✅ rclone - For Google Drive integration
-✅ Email client - mail/mailx/sendmail for notifications
-✅ Docker - For container management
-✅ MariaDB/MySQL client - For database backups
-📊 Backup Contents
+✅ **rclone** - For Google Drive integration
+✅ **Email client** - mail/mailx/sendmail for notifications  
+✅ **Docker** - For container management
+✅ **MariaDB/MySQL client** - For database backups
+
+## 📊 Backup Contents
 
 Each backup includes:
 
-📁 Application files (excluding node_modules, logs, etc.)
-🗃️ Database dump (.sql file)
-📸 Upload files (compressed)
-🐳 Docker compose configuration
-📋 Restoration guide (README)
-🔄 Restoration
+- 📁 Application files (excluding node_modules, logs, etc.)
+- 🗃️ Database dump (.sql file)
+- 📸 Upload files (compressed)
+- 🐳 Docker compose configuration
+- 📋 Restoration guide (README)
 
 ## 📝 License
 
