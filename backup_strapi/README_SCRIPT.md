@@ -1,5 +1,3 @@
-markdown
-
 # 🗄️ Strapi Portfolio Backup Script
 
 A comprehensive backup solution for Strapi applications with cloud synchronization and email notifications.
