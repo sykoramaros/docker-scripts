@@ -1,6 +1,9 @@
 #!/bin/bash
 source config.sh
 
+# Ensure backup directory exists
+mkdir -p "$BACKUP_DIR"
+
 backup_application() {
     echo "📁 Backing up application files..."
     if ! rsync -av --exclude='node_modules' \
@@ -20,6 +23,9 @@ backup_application() {
 
 create_restore_readme() {
     echo "📋 Creating restore README..."
+ # Ensure the date directory exists for the README
+    mkdir -p "$BACKUP_DIR/$DATE"
+
     cat > "$BACKUP_DIR/$DATE/RESTORE_README.md" << EOF
 # Strapi Portfolio Backup Restoration
 
