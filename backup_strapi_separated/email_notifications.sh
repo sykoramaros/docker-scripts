@@ -81,3 +81,6 @@ Please check the server and fix the issues."
         send_email "$EMAIL_SUBJECT_ERROR" "$email_message" true
     fi
 }
+
+
+send_backup_report

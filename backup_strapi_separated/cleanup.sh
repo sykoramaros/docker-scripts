@@ -17,3 +17,7 @@ cleanup_uncompressed() {
         rm -rf "$BACKUP_DIR/$DATE"
     fi
 }
+
+# 🚀 MAIN EXECUTION - CALL THE FUNCTIONS
+cleanup_local_backups
+cleanup_uncompressed

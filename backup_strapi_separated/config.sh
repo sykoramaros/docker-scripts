@@ -1,10 +1,17 @@
 #!/bin/bash
 # Configuration file for Strapi Backup System
 
+# First load .env file if it exists
+if [ -f "$(dirname "$0")/../.env" ]; then
+    echo "🔧 Loading environment variables from .env file..."
+    # Safe way to load .env - handles spaces and special characters
+    export $(grep -v '^#' "$(dirname "$0")/../.env" | grep -v '^$' | xargs)
+fi
+
 export DATE=$(date +%Y%m%d_%H%M%S)
 
 # Application settings
-export APP_NAME="your-app-name"
+export APP_NAME="${APP_NAME:-your-app-name}"   # from .env or default
 export BACKUP_BASE_NAME="${APP_NAME}_backup"
 export BACKUP_FILENAME="${BACKUP_BASE_NAME}_${DATE}.tar.gz"
 export BACKUP_DIR="/var/Docker/${APP_NAME}/backups"
@@ -16,8 +23,8 @@ export PROJECT_DIR="."
 # Database settings
 export DB_CONTAINER="my_${APP_NAME}_mariadb"
 export DB_NAME="${APP_NAME}_mariadb"
-export DB_USER="strapi_user"
-export DB_PASS="your_secure_password_here"
+export DB_USER="${DB_USER:-strapi_user}"      # from .env or default
+export DB_PASS="${DB_PASS:-default_password}" # from .env or default
 export DB_CLIENT="mariadb"
 export DUMP_CLIENT="mariadb-dump"
 

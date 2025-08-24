@@ -33,3 +33,8 @@ backup_docker_config() {
     echo "✅ Docker configuration backed up"
     return 0
 }
+
+# 🚀 MAIN EXECUTION - CALL THE FUNCTIONS
+mkdir -p "$BACKUP_DIR/$DATE"  # Create date-specific directory
+backup_uploads
+backup_docker_config

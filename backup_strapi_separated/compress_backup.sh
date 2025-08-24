@@ -16,3 +16,6 @@ compress_backup() {
         return 1
     fi
 }
+
+# 🚀 MAIN EXECUTION - CALL THE FUNCTIONS
+compress_backup

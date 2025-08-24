@@ -60,3 +60,7 @@ backup_database() {
     fi
     return 0
 }
+
+# 🚀 MAIN EXECUTION - CALL THE FUNCTION
+mkdir -p "$BACKUP_DIR/$DATE"  # Create date-specific directory
+backup_database

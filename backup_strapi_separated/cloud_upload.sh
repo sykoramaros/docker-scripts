@@ -49,3 +49,7 @@ cleanup_cloud_backups() {
         done
     fi
 }
+
+# 🚀 MAIN EXECUTION - CALL THE FUNCTIONS
+cloud_upload
+cleanup_cloud_backups

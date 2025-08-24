@@ -52,3 +52,8 @@ Backup date: $DATE
 EOF
     echo "✅ Restore README created"
 }
+
+# 🚀 MAIN EXECUTION - CALL THE FUNCTIONS
+mkdir -p "$BACKUP_DIR/$DATE"  # Create date-specific directory
+backup_application
+create_restore_readme
