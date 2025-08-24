@@ -1,4 +1,5 @@
 markdown
+
 # 🗄️ Strapi Portfolio Backup Script
 
 A comprehensive backup solution for Strapi applications with cloud synchronization and email notifications.
@@ -16,47 +17,66 @@ A comprehensive backup solution for Strapi applications with cloud synchronizati
 
 ## 🚀 Quick Start
 
+### Make the script executable
+
 ```bash
-# Make the script executable
 chmod +x backup_strapi.sh
+```
 
-# Run the backup
+### Run the backup
+
+```bash
 ./backup_strapi.sh
-⚙️ Configuration
+```
 
-Edit the following variables in the script:
+## ⚙️ Configuration
 
-bash
-# Directory settings
+### Directory settings
+
+```bash
 BACKUP_DIR="/path/to/backups"
 PROJECT_DIR="."
+```
 
-# Database settings
+### Database settings
+
+```bash
 DB_CONTAINER="your_mariadb_container"
 DB_NAME="your_database"
 DB_USER="your_username"
 DB_PASS="your_password"
+```
 
-# Cloud settings
+### Cloud settings
+
+```bash
 GDRIVE_REMOTE="gdrive"
 GDRIVE_FOLDER="your-backup-folder"
 ENABLE_CLOUD_BACKUP=true
+```
 
-# Email settings
+### Email settings
+
+```bash
 ENABLE_EMAIL_NOTIFICATIONS=true
 EMAIL_TO="your-email@example.com"
-🔧 Setup
+```
 
-Install rclone:
+## 📦 Installations
 
-bash
+### Install rclone:
+
+```bash
 curl https://rclone.org/install.sh | sudo bash
 rclone config
 Set script permissions:
+```
 
-bash
+```bash
 chmod +x backup_strapi.sh
-📋 Requirements
+```
+
+## 📋 Requirements
 
 ✅ rclone - For Google Drive integration
 ✅ Email client - mail/mailx/sendmail for notifications
@@ -73,18 +93,6 @@ Each backup includes:
 📋 Restoration guide (README)
 🔄 Restoration
 
-See the generated RESTORE_README.md in each backup folder for detailed restoration instructions.
-
-⚠️ Important Notes
-
-Test the script in your environment before production use
-Ensure adequate storage space for backups
-Keep credentials secure
-Monitor backup logs regularly
-📝 License
+## 📝 License
 
 MIT License - feel free to modify for your needs!
-
-🤝 Contributing
-
-Feel free to submit issues and enhancement requests!
