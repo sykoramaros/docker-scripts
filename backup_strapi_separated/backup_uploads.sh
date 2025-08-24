@@ -1,6 +1,9 @@
 #!/bin/bash
 source config.sh
 
+# Ensure backup directory exists
+mkdir -p "$BACKUP_DIR"
+
 backup_uploads() {
     echo "📸 Backing up upload files..."
     if [ -d "backend-strapi/public/uploads" ]; then

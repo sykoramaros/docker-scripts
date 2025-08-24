@@ -1,6 +1,9 @@
 #!/bin/bash
 source config.sh
 
+# Ensure backup directory exists
+mkdir -p "$BACKUP_DIR"
+
 start_docker_container() {
     if ! docker ps | grep -q $DB_CONTAINER; then
         echo "⚠️  Container $DB_CONTAINER not running. Starting Docker Compose..."

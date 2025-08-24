@@ -7,10 +7,10 @@ export DATE=$(date +%Y%m%d_%H%M%S)
 export APP_NAME="your-app-name"
 export BACKUP_BASE_NAME="${APP_NAME}_backup"
 export BACKUP_FILENAME="${BACKUP_BASE_NAME}_${DATE}.tar.gz"
-export BACKUP_FILE_PATH="/$BACKUP_FILENAME"
+export BACKUP_DIR="/var/Docker/${APP_NAME}/backups"
+export BACKUP_FILE_PATH="$BACKUP_DIR/$BACKUP_FILENAME"
 
 # Backup settings
-export BACKUP_DIR="/var/Docker/${APP_NAME}/backups"
 export PROJECT_DIR="."
 
 # Database settings
